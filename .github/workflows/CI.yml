@@ -1,0 +1,15 @@
+name: CI
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+
+      - run: "npx --package . danger-ts"
+        name: "Make a small babel app"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

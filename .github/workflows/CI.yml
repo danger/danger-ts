@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
 
-      - run: "npx danger-ts"
-        name: "Use npx to run the dangerfile"
+      - name: "Use npx to run the dangerfile"
+        run: "npx danger-ts"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -3,7 +3,7 @@
 An npx-able mix of Danger and TypeScript, so you can trivially use Danger JS with a TS Dangerfile without having Danger in your dependency tree.  
 
 ```sh
-echo 'import {markdown} from "danger"; markdown("Hi!");" > dangerfile.ts
+echo 'import {markdown} from "danger"; markdown("Hi!");"' > dangerfile.ts
 
 npx danger-ts
 ```
